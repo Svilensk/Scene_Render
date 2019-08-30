@@ -1,0 +1,8 @@
+﻿  View.cpp
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+  Generating code
+  4 of 2309 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  3DAvanzado_PR1.vcxproj -> D:\ESNE\4º Diseño y Desarrollo de Videojuegos\3D Avanzado\0. Entregas\3D avanzado - Entrega I\Práctica I - 3D Avanzado\project\3DAvanzado_PR1\Released\3DAvanzado_PR1.exe

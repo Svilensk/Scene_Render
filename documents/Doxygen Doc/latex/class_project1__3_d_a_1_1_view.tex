@@ -1,0 +1,49 @@
+\hypertarget{class_project1__3_d_a_1_1_view}{}\section{Project1\+\_\+3\+DA\+::View Class Reference}
+\label{class_project1__3_d_a_1_1_view}\index{Project1\_3DA::View@{Project1\_3DA::View}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_project1__3_d_a_1_1_view_a0653f17cc62f80491166d8c720463d77}{View}} (size\+\_\+t width, size\+\_\+t height, vector$<$ \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh}{Mesh}} $>$ drawable\+\_\+meshes)
+\item 
+bool \mbox{\hyperlink{class_project1__3_d_a_1_1_view_ad0e5a11a1fe18f0daa36fb8aa395ad06}{load\+\_\+image}} (const char $\ast$image\+\_\+path)
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_view_abaf17c019ec411a290cda4c88f7bd341}{update}} ()
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_view_a4f6e975241643b89f82c3e456df7f478}{paint}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_project1__3_d_a_1_1_view_a0653f17cc62f80491166d8c720463d77}\label{class_project1__3_d_a_1_1_view_a0653f17cc62f80491166d8c720463d77}} 
+\index{Project1\_3DA::View@{Project1\_3DA::View}!View@{View}}
+\index{View@{View}!Project1\_3DA::View@{Project1\_3DA::View}}
+\subsubsection{\texorpdfstring{View()}{View()}}
+{\footnotesize\ttfamily Project1\+\_\+3\+D\+A\+::\+View\+::\+View (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{width,  }\item[{size\+\_\+t}]{height,  }\item[{vector$<$ \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh}{Mesh}} $>$}]{drawable\+\_\+meshes }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_project1__3_d_a_1_1_view}{View}} presenta la información conjunta de la escena, encargada de llamar al update y al paint de todos los modelos presentes, ademas puede configurar la posicion, escala o rotacion de cada modelo. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_project1__3_d_a_1_1_view_ad0e5a11a1fe18f0daa36fb8aa395ad06}\label{class_project1__3_d_a_1_1_view_ad0e5a11a1fe18f0daa36fb8aa395ad06}} 
+\index{Project1\_3DA::View@{Project1\_3DA::View}!load\_image@{load\_image}}
+\index{load\_image@{load\_image}!Project1\_3DA::View@{Project1\_3DA::View}}
+\subsubsection{\texorpdfstring{load\_image()}{load\_image()}}
+{\footnotesize\ttfamily bool Project1\+\_\+3\+D\+A\+::\+View\+::load\+\_\+image (\begin{DoxyParamCaption}\item[{const char $\ast$}]{image\+\_\+path }\end{DoxyParamCaption})}
+
+Método encargado de cargar la imágen que se pasa al view, es llamada en cada frame, antes de dibujar las mallas, y vacía el buffer de píxeles en cada llamada, para volver a dibujarlo continuamente \mbox{\Hypertarget{class_project1__3_d_a_1_1_view_a4f6e975241643b89f82c3e456df7f478}\label{class_project1__3_d_a_1_1_view_a4f6e975241643b89f82c3e456df7f478}} 
+\index{Project1\_3DA::View@{Project1\_3DA::View}!paint@{paint}}
+\index{paint@{paint}!Project1\_3DA::View@{Project1\_3DA::View}}
+\subsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+View\+::paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metodo de dibujo, llamado cada vez que se quieran mostrar elementos por pantalla, dibuja tanto la imágen de fondo como las mallas \mbox{\Hypertarget{class_project1__3_d_a_1_1_view_abaf17c019ec411a290cda4c88f7bd341}\label{class_project1__3_d_a_1_1_view_abaf17c019ec411a290cda4c88f7bd341}} 
+\index{Project1\_3DA::View@{Project1\_3DA::View}!update@{update}}
+\index{update@{update}!Project1\_3DA::View@{Project1\_3DA::View}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+View\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update actualiza los valores generales de la escena, llama a los metodos set de las diferentes mallas para actualizar su posicion, rotación o escala, para después llamar al método update de cada malla dentro del vector Drawable Meshes 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/View.\+hpp\item 
+sources/View.\+cpp\end{DoxyCompactItemize}

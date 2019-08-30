@@ -1,0 +1,135 @@
+\hypertarget{class_project1__3_d_a_1_1_mesh}{}\section{Project1\+\_\+3\+DA\+::Mesh Class Reference}
+\label{class_project1__3_d_a_1_1_mesh}\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_a13cfddbd1bcf1189002d8e012cae7d91}{Mesh}} (size\+\_\+t width, size\+\_\+t height, std\+::string obj\+\_\+file\+Path)
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_a12e7e10c4f96a189b8e3c5c5fba969c5}{update}} (Point3f light\+Vector, float width, float height)
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_aa110a116c9c781f19a3566c872ea3799}{paint}} (\mbox{\hyperlink{class_project1__3_d_a_1_1_rasterizer}{Rasterizer}}$<$ \mbox{\hyperlink{class_project1__3_d_a_1_1_color___buffer___rgba8888}{Color\+\_\+\+Buffer}} $>$ $\ast$rasterizer, float width, float height)
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_a2013fe1edf4b3f197c9671976606b082}{Set\+Parent}} (\mbox{\hyperlink{class_project1__3_d_a_1_1_mesh}{Mesh}} $\ast$child\+\_\+model)
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_a340eaac789910acd0f302b79b58d791a}{Set\+AngleX}} (float value)
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_a92d634959d363bdc64bf7fb5add04e2f}{Set\+AngleY}} (float value)
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_aa4f7fcdaebf24f4ab0115e4b0606e689}{Set\+Translation}} (float x, float y, float z)
+\item 
+void \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_a09bb4309c15f90d20480c55607be9c57}{Set\+Scale}} (float scale)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transformation3f \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_a14ae1bf67398a21838c95b091b52eb26}{transformation}}
+\item 
+Transformation3f \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_ae9fa56d289f035b9d6e4390d4c390228}{ptransformation}}
+\item 
+Rotation3f \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_a15f8e807985fe7e32b17d55beb15480e}{rotation\+\_\+x}}
+\item 
+Rotation3f \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_aa6c25a257a3c52db8dc6b53f02a2532c}{rotation\+\_\+y}}
+\item 
+Translation3f \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_ad05748fccfea44a3ca72d741a75b0750}{translation}}
+\item 
+Scaling3f \mbox{\hyperlink{class_project1__3_d_a_1_1_mesh_af5e0a1a594abbb3e9253dbfecfff4fff}{scaling}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_a13cfddbd1bcf1189002d8e012cae7d91}\label{class_project1__3_d_a_1_1_mesh_a13cfddbd1bcf1189002d8e012cae7d91}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily Project1\+\_\+3\+D\+A\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{width,  }\item[{size\+\_\+t}]{height,  }\item[{std\+::string}]{obj\+\_\+file\+Path }\end{DoxyParamCaption})}
+
+El constructor de mesh obtiene valores de un modelo, los guarda y prepara nuevos contenedores y variables para la modificación y dibujado de estos 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_aa110a116c9c781f19a3566c872ea3799}\label{class_project1__3_d_a_1_1_mesh_aa110a116c9c781f19a3566c872ea3799}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!paint@{paint}}
+\index{paint@{paint}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+Mesh\+::paint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_project1__3_d_a_1_1_rasterizer}{Rasterizer}}$<$ \mbox{\hyperlink{class_project1__3_d_a_1_1_color___buffer___rgba8888}{Color\+\_\+\+Buffer}} $>$ $\ast$}]{rasterizer,  }\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+Metodo de dibujado del mesh, convirtiendo coordenadas a coordenadas de pantalla (Z se escala a un valor suficientemente grande para el z\+\_\+buffer) \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_a340eaac789910acd0f302b79b58d791a}\label{class_project1__3_d_a_1_1_mesh_a340eaac789910acd0f302b79b58d791a}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!SetAngleX@{SetAngleX}}
+\index{SetAngleX@{SetAngleX}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{SetAngleX()}{SetAngleX()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+Mesh\+::\+Set\+AngleX (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+Establecemos los valores de rotación en el eje X del modelo \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_a92d634959d363bdc64bf7fb5add04e2f}\label{class_project1__3_d_a_1_1_mesh_a92d634959d363bdc64bf7fb5add04e2f}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!SetAngleY@{SetAngleY}}
+\index{SetAngleY@{SetAngleY}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{SetAngleY()}{SetAngleY()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+Mesh\+::\+Set\+AngleY (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+Establecemos los valores de rotación en el eje Y del modelo \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_a2013fe1edf4b3f197c9671976606b082}\label{class_project1__3_d_a_1_1_mesh_a2013fe1edf4b3f197c9671976606b082}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!SetParent@{SetParent}}
+\index{SetParent@{SetParent}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{SetParent()}{SetParent()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+Mesh\+::\+Set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_project1__3_d_a_1_1_mesh}{Mesh}} $\ast$}]{child\+\_\+model }\end{DoxyParamCaption})}
+
+Establecemos la relación jerarquica entre modelos (Pasamos al modelo un puntero a su padre) \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_a09bb4309c15f90d20480c55607be9c57}\label{class_project1__3_d_a_1_1_mesh_a09bb4309c15f90d20480c55607be9c57}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+Mesh\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{float}]{scale }\end{DoxyParamCaption})}
+
+Establecemos los valores de escala del modelo \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_aa4f7fcdaebf24f4ab0115e4b0606e689}\label{class_project1__3_d_a_1_1_mesh_aa4f7fcdaebf24f4ab0115e4b0606e689}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!SetTranslation@{SetTranslation}}
+\index{SetTranslation@{SetTranslation}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{SetTranslation()}{SetTranslation()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+Mesh\+::\+Set\+Translation (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+Establecemos los valores de transformación del modelo \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_a12e7e10c4f96a189b8e3c5c5fba969c5}\label{class_project1__3_d_a_1_1_mesh_a12e7e10c4f96a189b8e3c5c5fba969c5}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!update@{update}}
+\index{update@{update}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Project1\+\_\+3\+D\+A\+::\+Mesh\+::update (\begin{DoxyParamCaption}\item[{Point3f}]{light\+Vector,  }\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+Update es el metodo encargado de actualizar la posición de vertices, su iluminación, de manera directa o jerárquicamente 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_ae9fa56d289f035b9d6e4390d4c390228}\label{class_project1__3_d_a_1_1_mesh_ae9fa56d289f035b9d6e4390d4c390228}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!ptransformation@{ptransformation}}
+\index{ptransformation@{ptransformation}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{ptransformation}{ptransformation}}
+{\footnotesize\ttfamily Transformation3f Project1\+\_\+3\+D\+A\+::\+Mesh\+::ptransformation}
+
+Matriz de transformación del padre del modelo \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_a15f8e807985fe7e32b17d55beb15480e}\label{class_project1__3_d_a_1_1_mesh_a15f8e807985fe7e32b17d55beb15480e}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!rotation\_x@{rotation\_x}}
+\index{rotation\_x@{rotation\_x}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{rotation\_x}{rotation\_x}}
+{\footnotesize\ttfamily Rotation3f Project1\+\_\+3\+D\+A\+::\+Mesh\+::rotation\+\_\+x}
+
+Matriz de transformación de rotación del modelo en X \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_aa6c25a257a3c52db8dc6b53f02a2532c}\label{class_project1__3_d_a_1_1_mesh_aa6c25a257a3c52db8dc6b53f02a2532c}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!rotation\_y@{rotation\_y}}
+\index{rotation\_y@{rotation\_y}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{rotation\_y}{rotation\_y}}
+{\footnotesize\ttfamily Rotation3f Project1\+\_\+3\+D\+A\+::\+Mesh\+::rotation\+\_\+y}
+
+Matriz de transformación de rotación del modelo en Y \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_af5e0a1a594abbb3e9253dbfecfff4fff}\label{class_project1__3_d_a_1_1_mesh_af5e0a1a594abbb3e9253dbfecfff4fff}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!scaling@{scaling}}
+\index{scaling@{scaling}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{scaling}{scaling}}
+{\footnotesize\ttfamily Scaling3f Project1\+\_\+3\+D\+A\+::\+Mesh\+::scaling}
+
+Matriz de escala del modelo en X \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_a14ae1bf67398a21838c95b091b52eb26}\label{class_project1__3_d_a_1_1_mesh_a14ae1bf67398a21838c95b091b52eb26}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!transformation@{transformation}}
+\index{transformation@{transformation}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{transformation}{transformation}}
+{\footnotesize\ttfamily Transformation3f Project1\+\_\+3\+D\+A\+::\+Mesh\+::transformation}
+
+Matriz de transformación del modelo \mbox{\Hypertarget{class_project1__3_d_a_1_1_mesh_ad05748fccfea44a3ca72d741a75b0750}\label{class_project1__3_d_a_1_1_mesh_ad05748fccfea44a3ca72d741a75b0750}} 
+\index{Project1\_3DA::Mesh@{Project1\_3DA::Mesh}!translation@{translation}}
+\index{translation@{translation}!Project1\_3DA::Mesh@{Project1\_3DA::Mesh}}
+\subsubsection{\texorpdfstring{translation}{translation}}
+{\footnotesize\ttfamily Translation3f Project1\+\_\+3\+D\+A\+::\+Mesh\+::translation}
+
+Matriz de transformación del modelo en X 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/Mesh.\+hpp\item 
+sources/Mesh.\+cpp\end{DoxyCompactItemize}

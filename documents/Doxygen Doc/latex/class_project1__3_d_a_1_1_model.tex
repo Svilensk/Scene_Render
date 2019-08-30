@@ -1,0 +1,60 @@
+\hypertarget{class_project1__3_d_a_1_1_model}{}\section{Project1\+\_\+3\+DA\+::Model Class Reference}
+\label{class_project1__3_d_a_1_1_model}\index{Project1\_3DA::Model@{Project1\_3DA::Model}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_project1__3_d_a_1_1_model_a4c36da63639d9de9d7a05f5f2f5aa7fb}{Model}} (const std\+::string \&model\+\_\+file\+Path)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ Point4f $>$ \mbox{\hyperlink{class_project1__3_d_a_1_1_model_a6ec9689c81a02e289bfa13d87bb99f7b}{obj\+Vertex}}
+\item 
+vector$<$ Point4f $>$ \mbox{\hyperlink{class_project1__3_d_a_1_1_model_a3587a9a567d01cdfd4f20809a0874d99}{obj\+Normals}}
+\item 
+vector$<$ Point3i $>$ \mbox{\hyperlink{class_project1__3_d_a_1_1_model_af3802905b1e0b8c48f8f9ab2c74251bc}{obj\+Triangles}}
+\item 
+vector$<$ Point3f $>$ \mbox{\hyperlink{class_project1__3_d_a_1_1_model_a56beffd25edb631869406266a27bcb47}{obj\+Vertex\+Color}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_project1__3_d_a_1_1_model_a4c36da63639d9de9d7a05f5f2f5aa7fb}\label{class_project1__3_d_a_1_1_model_a4c36da63639d9de9d7a05f5f2f5aa7fb}} 
+\index{Project1\_3DA::Model@{Project1\_3DA::Model}!Model@{Model}}
+\index{Model@{Model}!Project1\_3DA::Model@{Project1\_3DA::Model}}
+\subsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily Project1\+\_\+3\+D\+A\+::\+Model\+::\+Model (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model\+\_\+file\+Path }\end{DoxyParamCaption})}
+
+El constructor del modelo se encarga de leer los datos desde el archivo del modelo, y volcar esa información en contenedores que después se manipularán en la escena los principales elementos extraídos del archivo son\+: Shapes, Vértices, Normales y Vertex\+Colors 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_project1__3_d_a_1_1_model_a3587a9a567d01cdfd4f20809a0874d99}\label{class_project1__3_d_a_1_1_model_a3587a9a567d01cdfd4f20809a0874d99}} 
+\index{Project1\_3DA::Model@{Project1\_3DA::Model}!objNormals@{objNormals}}
+\index{objNormals@{objNormals}!Project1\_3DA::Model@{Project1\_3DA::Model}}
+\subsubsection{\texorpdfstring{objNormals}{objNormals}}
+{\footnotesize\ttfamily vector$<$ Point4f $>$ Project1\+\_\+3\+D\+A\+::\+Model\+::obj\+Normals}
+
+Vector que guarda cada valor de las normales de cada vertice del modelo \mbox{\Hypertarget{class_project1__3_d_a_1_1_model_af3802905b1e0b8c48f8f9ab2c74251bc}\label{class_project1__3_d_a_1_1_model_af3802905b1e0b8c48f8f9ab2c74251bc}} 
+\index{Project1\_3DA::Model@{Project1\_3DA::Model}!objTriangles@{objTriangles}}
+\index{objTriangles@{objTriangles}!Project1\_3DA::Model@{Project1\_3DA::Model}}
+\subsubsection{\texorpdfstring{objTriangles}{objTriangles}}
+{\footnotesize\ttfamily vector$<$ Point3i $>$ Project1\+\_\+3\+D\+A\+::\+Model\+::obj\+Triangles}
+
+Vector que posee grupos de tres vectores que forman un triángulo \mbox{\Hypertarget{class_project1__3_d_a_1_1_model_a6ec9689c81a02e289bfa13d87bb99f7b}\label{class_project1__3_d_a_1_1_model_a6ec9689c81a02e289bfa13d87bb99f7b}} 
+\index{Project1\_3DA::Model@{Project1\_3DA::Model}!objVertex@{objVertex}}
+\index{objVertex@{objVertex}!Project1\_3DA::Model@{Project1\_3DA::Model}}
+\subsubsection{\texorpdfstring{objVertex}{objVertex}}
+{\footnotesize\ttfamily vector$<$ Point4f $>$ Project1\+\_\+3\+D\+A\+::\+Model\+::obj\+Vertex}
+
+Vector que alberga los valores de cada vertice del modelo \mbox{\Hypertarget{class_project1__3_d_a_1_1_model_a56beffd25edb631869406266a27bcb47}\label{class_project1__3_d_a_1_1_model_a56beffd25edb631869406266a27bcb47}} 
+\index{Project1\_3DA::Model@{Project1\_3DA::Model}!objVertexColor@{objVertexColor}}
+\index{objVertexColor@{objVertexColor}!Project1\_3DA::Model@{Project1\_3DA::Model}}
+\subsubsection{\texorpdfstring{objVertexColor}{objVertexColor}}
+{\footnotesize\ttfamily vector$<$ Point3f $>$ Project1\+\_\+3\+D\+A\+::\+Model\+::obj\+Vertex\+Color}
+
+Vector que posee el color de cada vértice del modelo 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/Obj\+\_\+\+Loader.\+hpp\item 
+sources/Obj\+\_\+\+Loader.\+cpp\end{DoxyCompactItemize}
